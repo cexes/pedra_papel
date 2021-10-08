@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tesoura</title>
+</head>
+<body>          
+        
+                <input id="segunda_tela" type="text" disabled="disabled" placeholder="Jogador">
+                <button   onclick="ler('pedra',Math.round(Math.random()*(3 - 1 +1)+1 ))" type="button">Pedra</button>
+                <button   onclick="ler('tesoura',Math.round(Math.random()))" type="button">Tesoura </button>
+                <button   onclick="ler('papel', Math.round(Math.random()))" type="button">Papel</button>
+                
+                <input placeholder="Computador"  id="tela" type="text" disabled="disabled"> <br>
+                <input placeholder="Resultado"   id="resultado" type="text" disabled="disabled"> 
+        
+    <script>
+      var computador
+           
+        function ler(acao, pc){
+                document.getElementById('segunda_tela').value = acao
+                if(pc ===0 || pc===1){
+                computador = document.getElementById('tela').value = 'pedra'}
+                    else if(pc===2 || pc ==3)  
+                computador = document.getElementById('tela').value = 'papel'
+                
+                    else if(pc === 4){
+                computador = document.getElementById('tela').value = 'tesoura'
+                }
+              
+              if(acao === computador){//empate
+                    document.getElementById('resultado').value = "Empate"   
+                    //Jogador
+                }  if(acao==="pedra"&& computador==="tesoura"){
+                    document.getElementById('resultado').value = "Jogador Ganhou"      
+                }  if(acao ==="tesoura"&&computador==="papel"){
+                    document.getElementById('resultado').value = "Jogador Ganhou"}
+                    if(acao ==="papel"&& computador ==="pedra"){
+                        document.getElementById('resultado').value = "Jogador Ganhou"
+                    }if(acao==="tesoura"&&computador==="papel"){
+                        document.getElementById('result').value = "Jogador Ganhou"
+                    }
+                 //Computador
+                 if(computador ==="tesoura"&& acao==="papel"){
+                  document.getElementById('resultado').value = "Computador Ganhou"}
+                 if(computador ==="papel"&& acao ==="pedra"){
+                     document.getElementById('resultado').value = "Computador Ganhou"
+                 }if(computador==="tesoura"&&acao==="papel"){
+                     document.getElementById('result').value = "Computador Ganhou"
+                 } if(computador ==="pedra"&& acao ==="tesoura"){
+                     document.getElementById('resultado').value ="Computador Ganhou"
+                 }
+                }
+            
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    background-color: aquamarine;
+   }
+   #tela{
+       margin-left: 300px;
+       text-align: center;
+       height: 80px;
+       margin-top: 160px;
+       border-radius: 10px;
+       background-color: papayawhip;
+       letter-spacing: 3px;
+   }
+   #segunda_tela{
+       border-radius: 10px;
+       text-align: center;
+       height: 80px;
+       margin-top: 160px;
+       margin-left: 50px;
+       background-color: papayawhip;
+       letter-spacing: 3px;
+   }
+   #resultado{
+       margin-left: 500px;
+       text-align: center;
+       height: 80px;
+       margin-bottom: 300px;
+       border-radius: 10px;
+       background-color: papayawhip;
+       letter-spacing: 3px;
+   } 
+   
